@@ -1,7 +1,9 @@
+package Logic;
+
 import java.util.HashSet;
 import java.util.Objects;
 
-// The Square class represents one square on the grid
+// The Logic.Square class represents one square on the grid
 public class Square {
 
     private int rowsAndColumns;

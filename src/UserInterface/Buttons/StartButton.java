@@ -1,24 +1,15 @@
-import javax.swing.*;
+package UserInterface.Buttons;
+
+import UserInterface.GUI;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 // The start button starts the game when the player clicks on it
-public class StartButton extends JButton implements ActionListener {
-
-    private Game game;
+public class StartButton extends CustomButton {
 
     public StartButton(GUI gui){
-
-        this.setBounds(530,20,120,60);
-        this.setEnabled(true);
-        this.setVisible(true);
-        this.setText("Start");
-        this.setBackground(Color.DARK_GRAY);
-        this.setForeground(Color.WHITE);
-        this.addActionListener(this);
-
-        this.game = gui.getGame();
+        super("Start", gui.getGame(), new Dimension(120,60), new Point(530,20));
     }
 
     @Override

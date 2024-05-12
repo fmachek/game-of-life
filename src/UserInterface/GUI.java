@@ -1,15 +1,21 @@
+package UserInterface;
+
+import Logic.Game;
+import Logic.Square;
+import UserInterface.Buttons.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-// The GUI class handles the stuff that happens on the screen
+// The UserInterface.GUI class handles the stuff that happens on the screen
 public class GUI {
 
     Graphics graphics;
 
-    // GUI values
+    // UserInterface.GUI values
     private final int width = 700;
     private final int height = 540;
     private int rowsAndColumns;
@@ -32,6 +38,7 @@ public class GUI {
     private ResetButton resetButton;
     private RefreshButton refreshButton;
     private JLabel refreshLabel;
+    private RandomButton randomButton;
     //
 
     public StartButton getStart(){
@@ -71,6 +78,9 @@ public class GUI {
         this.refreshButton = new RefreshButton(this);
         this.window.add(refreshButton);
 
+        this.randomButton = new RandomButton(this);
+        this.window.add(randomButton);
+
         this.refreshLabel = new JLabel();
         refreshLabel.setBounds(530,180,60,60);
         refreshLabel.setText("<html>Refresh<br>Rate (ms):</html>");
@@ -79,6 +89,7 @@ public class GUI {
         refreshLabel.setOpaque(true);
         refreshLabel.setEnabled(true);
         refreshLabel.setVisible(true);
+        refreshLabel.setBorder(BorderFactory.createEmptyBorder(0, 5, 0, 5));
         window.add(refreshLabel);
 
         this.window.setVisible(true);
@@ -234,6 +245,14 @@ public class GUI {
                     g.fillRect(i*squareSize,j*squareSize,squareSize,squareSize);
                     g.setColor(Color.BLACK);
                     g.fillRect(i*squareSize+spacing,j*squareSize+spacing,squareSize-spacing*2,squareSize-spacing*2);
+                }
+            }
+        }
+
+        public void resetGuiGrid() {
+            for(int i = 0; i < rowsAndColumns; i++){
+                for(int j = 0; j < rowsAndColumns; j++){
+                    paintSquare(i*squareSize,j*squareSize);
                 }
             }
         }

@@ -1,6 +1,10 @@
+package Logic;
+
+import UserInterface.GUI;
+
 import java.util.HashSet;
 
-// The Game class handles the generations and creation of all the other elements
+// The Logic.Game class handles the generations and creation of all the other elements
 public class Game extends Thread {
     private int rowsAndColumns = 50; // Change this to change the grid size, 500 must be divisible by this number because the grid is 500x500 pixels
     private int squareSize;

@@ -1,3 +1,8 @@
+package UserInterface.Buttons;
+
+import Logic.Game;
+import UserInterface.GUI;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -21,6 +26,10 @@ public class RefreshButton extends JTextField implements ActionListener {
         this.addActionListener(this);
         this.setEnabled(true);
         this.setVisible(true);
+
+        Insets insets = getMargin();
+        insets.left = 5; // Adjust this value as needed
+        setMargin(insets);
 
     }
 
