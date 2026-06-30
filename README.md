@@ -12,10 +12,10 @@ This was my project in the second year of high school. It focused on implementin
 
 ## Rules
 
-- Any living cell with fewer than two live neighbors dies
-- Any living cell with two or three live neighbors lives on
-- Any living cell with more than three live neighbors dies
-- Any dead cell with exactly three live neighbors becomes a living cell
+- Any living cell with fewer than two living neighbors dies
+- Any living cell with two or three living neighbors lives on
+- Any living cell with more than three living neighbors dies
+- Any dead cell with exactly three living neighbors becomes a living cell
 
 ## Screenshot
 
